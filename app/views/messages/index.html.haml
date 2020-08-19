@@ -1,11 +1,12 @@
 .contents
-- @messages.each do |message|
-  .contents__post 
-    .message_title 
-      = message.title
-    .message_name
-      = message.name
-    .message_text 
-      = message.text
-    .message_nickname 
-      = message.nickname
+  - @messages.each do |message|
+    .contents__post 
+      .message_title 
+        = message.title
+      .message_name
+        = message.name
+      .message_text 
+        = message.text
+      .message_nickname
+        = message.nickname
+        -# = link_to   "/" を追加予定
