@@ -39,6 +39,7 @@ Things you may want to cover:
 |title|string|null: false|
 |name|string|null: false|
 |text|text|null: false|
+|nickname|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
