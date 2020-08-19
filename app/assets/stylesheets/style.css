@@ -4,7 +4,7 @@
   background-color: lightgrey;
   height: 50px;
 }
-a {
+.title {
   text-decoration: none;
   color: #5c658b;
   letter-spacing: 0.15em;
@@ -13,10 +13,14 @@ a {
   font-weight: bold;
 }
 .post {
-  padding: 8px 20px;
-  border: 3px solid rgba(67, 168, 27, 0.76);
-  color: rgba(68, 158, 33, 0.719);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  line-height: 50px;
+  padding: 4px 12px;
+  border: 3px solid rgba(209, 124, 13, 0.719);
+  color: rgba(209, 124, 13, 0.719);
   border-radius: 4px;
+  font-size: 20px;
 }
 .footer{
   color: #d37b33;
