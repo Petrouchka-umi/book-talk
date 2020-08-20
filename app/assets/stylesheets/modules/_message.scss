@@ -13,17 +13,20 @@
     height: 42vh;
     background-color: #5c658b;
     color: rgba(0, 0, 0, 0.8);
+    border-radius: 7px;
     .message_title {
       border: 1px solid gray;
       background-color: whitesmoke;
       margin: 5px 10px;
       padding: 3px 5px;
+      border-radius: 5px;
     }
     .message_name {
       border: 1px solid gray;
       background-color: whitesmoke;
       margin: 5px 10px;
       padding: 3px 5px;
+      border-radius: 5px;
     }
     .message_text {
       border: 1px solid gray;
@@ -31,6 +34,7 @@
       margin: 5px 10px; 
       height: 250px;
       padding: 3px 5px;
+      border-radius: 5px;
     }
     .message_nickname {
       border: 1px solid gray;
@@ -39,6 +43,7 @@
       text-align: center;
       width: 150px;
       padding: 3px 5px;
+      border-radius: 5px;
     }
   }
 }

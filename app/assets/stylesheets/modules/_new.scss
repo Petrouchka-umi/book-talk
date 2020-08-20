@@ -1,0 +1,60 @@
+.contents__form {
+  margin-top: 40px;
+  width: 70vw;
+  height: 60vh;
+  background-color:  #5c658b;
+  border-radius: 7px;
+  .form_box {
+    .form_field {
+      margin: 10px;
+      color: lightgray;
+      .message_title {
+        border: 1px solid gray;
+        height: calc(60vh - 55vh);
+        width: calc(70vw - 20px);
+        margin-bottom:5px;
+        padding:5px;
+        border-radius: 5px;
+      }
+      .message_name {
+        border: 1px solid gray;
+        height: calc(60vh - 55vh);
+        width: calc(70vw - 20px);
+        margin-bottom:5px;
+        padding:5px;
+        border-radius: 5px;
+      }
+      .message_text {
+        border: 1px solid gray;
+        height: calc(60vh - 20vh);
+        width: calc(70vw - 20px);
+        margin-bottom:5px;
+        padding:5px;
+        border-radius: 5px;
+      } 
+      .message_nickname {
+        border: 1px solid gray;
+        height: calc(60vh - 55vh);
+        width: calc(70vw - 40vw);
+        padding:5px;
+        border-radius: 5px;
+      }
+    }
+  .form_submit {
+    position: relative;
+    .submit {
+      position: absolute;
+      right: 60px;
+      bottom: 12px;
+      width: 200px;
+      height: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      background-color: whitesmoke ;
+      border: 3px solid rgba(209, 124, 13, 0.719);
+      color: rgba(209, 124, 13, 0.719);
+      border-radius: 4px;
+    }
+    }
+  }
+}
