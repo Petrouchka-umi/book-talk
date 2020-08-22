@@ -10,40 +10,48 @@
   &__post {
     margin-top: 80px;
     width: 70vw;
-    height: 42vh;
+    height: 50vh;
     background-color: #5c658b;
     color: rgba(0, 0, 0, 0.8);
     border-radius: 7px;
+    padding: 1px;
     .message_title {
+      height: calc(50vh - 45vh);
       border: 1px solid gray;
       background-color: whitesmoke;
-      margin: 5px 10px;
+      margin: 8px 10px;
       padding: 3px 5px;
       border-radius: 5px;
+      font-size: 25px;
     }
     .message_name {
+      height: calc(50vh - 45vh);
       border: 1px solid gray;
       background-color: whitesmoke;
-      margin: 5px 10px;
+      margin: 8px 10px;
       padding: 3px 5px;
       border-radius: 5px;
+      font-size: 25px;
     }
     .message_text {
       border: 1px solid gray;
       background-color: whitesmoke;
-      margin: 5px 10px; 
-      height: 250px;
+      margin: 8px 10px; 
+      height: calc(50vh - 170px);
       padding: 3px 5px;
       border-radius: 5px;
+      font-size: 25px;
     }
     .message_nickname {
       border: 1px solid gray;
       background-color: whitesmoke;
-      margin: 5px 10px;
+      margin: 8px 10px;
       text-align: center;
-      width: 150px;
+      height: calc(50vh - 45vh);
+      width: calc(70vw - 400px);
       padding: 3px 5px;
       border-radius: 5px;
+      font-size: 25px;
     }
   }
 }
