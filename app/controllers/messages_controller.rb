@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
+
   def index
     @messages = Message.all
   end
@@ -19,9 +21,27 @@ class MessagesController < ApplicationController
     # end
   end
 
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+  end
+
+  def edit
+  end
+
+  def update
+    message Message.find(params[:id])
+    message.update(message_params)
+  end
+
   private
   def message_params
     params.require(:message).permit(:title, :name, :text, :nickname)
   end
 
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
 end
