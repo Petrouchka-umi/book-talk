@@ -13,14 +13,13 @@
         %h1.grid-6
           %a.title{:href => "/"} BookTalk
         - if user_signed_in?
-          .user_box
-            = link_to "ログアウト", destroy_user_session_paht, method: :delete, class: "button"
-            = link_to "投稿する", new_messages_path, class: "post"
+          .user_nav.grid-6
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"
+            = link_to "投稿する", new_message_path, class: "post"
         - else
           .user_nav.grid-6
             = link_to "ログイン", new_user_session_path, class: "post"
             = link_to "新規登録", new_user_registration_path, class: "post"
-          -# %a.post{:href => "/messages/new"} 投稿する
     = yield
     %footer
       %p.footer

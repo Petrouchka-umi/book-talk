@@ -2,15 +2,18 @@
   box-sizing: border-box;
 }
 .contents {
-  width: 100vw;
-  height: 100vh;
   background-color: lightskyblue;
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  .search_box {
+    height: 80px;
+    background-color: lightskyblue;
+  }
   &__post {
-    margin-top: 80px;
-    width: 70vw;
-    height: 50vh;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: calc(100vw - 30vw);
+    height: calc(100vh - 50vh);
     background-color: #5c658b;
     color: rgba(0, 0, 0, 0.8);
     border-radius: 7px;
