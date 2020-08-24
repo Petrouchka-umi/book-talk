@@ -1,7 +1,8 @@
 .contents
   .contents__user
-    = current_user.nickname
+    = @nickname
     さんの投稿一覧
+  .content_message
     - @messages.each do |message|
       .contents__post 
         .message_title 
@@ -10,6 +11,6 @@
           = message.name
         .message_text 
           = message.text
-        .message_nickname
-          nickname : 
-          = current_user.nickname
+        .btn 
+          = link_to message_path(message) do
+            Show

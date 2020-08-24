@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:edit, :show]
 
   def index
-    @messages = Message.all
+    @messages = Message.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -13,11 +13,10 @@ class MessagesController < ApplicationController
   def create
     # binding.pry
     @message = Message.create(message_params)
-    # @message.user = current_user
+    @message.user = current_user
     if @message.save
       redirect_to messages_path, notice: 'メッセージが送信されました'
     else
-      # @messages = messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
       render :new
     end
@@ -34,6 +33,8 @@ class MessagesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @message.comments.includes(:user)
   end
 
   def update

@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    @nickname = current_user.nickname
-    @messages = current_user.messages
+    @nickname = user.nickname
+    @messages = user.messages
   end
   
   def update

@@ -7,6 +7,6 @@
         = f.text_area :text, class: "message_text", placeholder: "type a message", rows: "140"
         .message_nickname 
           nickname : 
-          = current_user.nickname 
+          = @message.user.nickname 
       .form_submit
         = f.submit 'Send', class: "submit"

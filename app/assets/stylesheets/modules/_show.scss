@@ -1,7 +1,8 @@
-.comment_user {
-  color: mediumblue;
+.contents__user {
+  // color: mediumblue;
+  color: cornsilk;
   font-size: 25px;
-  margin: 10px  50px;
+  margin: 20px 0 0 50px;
   font-weight: bold;
 }
 .content_message {
@@ -93,29 +94,32 @@
       border-radius: 4px;
     }
   }
+  .no_user_comment {
+    font-size: 20px;
+  }
 }
 .comments {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
-  font-size: 20px;
-  height: 20vh;
+  font-size: 22px;
+  // height: 20vh;
   width: 70vw;
   background-color: whitesmoke;
   color: rgba(0, 0, 0, 0.699);
+  border-radius: 4px;
   ul {
     display: flex;
     .comment_user {
-      background-color: burlywood;
-      width: 20px;
-      height: 20px;
-      margin: 10px;
+      font-size: 20px;
+      color: darkblue;
+      display: block;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
     }
     .comment_message {
-      background-color: burlywood;
-      width: 20px;
-      height: 20px;
-      margin: 10px;
+      color: rgba(0, 0, 0, 0.699);
     }
   }
 }

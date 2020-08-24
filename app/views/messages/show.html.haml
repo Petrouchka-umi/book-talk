@@ -9,25 +9,34 @@
         = @message.text
       .message_nickname
         nickname : 
-        = current_user.nickname
+        = @message.user.nickname
       .btn
         %ul.list
-          %li
-            = link_to edit_message_path(@message.id), method: :get do
-              Edit
-          %li
-            = link_to message_path(@message.id), method: :delete do
-              delete
+          - if user_signed_in? && current_user.id == @message.user_id
+            %li
+              = link_to edit_message_path(@message.id), method: :get do
+                Edit
+            %li
+              = link_to message_path(@message.id), method: :delete do
+                delete
   .contents_form
-    = form_with model: @comment, html: {class: "form_box"}, local: true do |f|
-      .form_field
-        = f.text_area :text, class: "comment_text", placeholder: "type a comment", rows: "140"
-      .form_submit
-        = f.submit 'Send', class: "submit"
+    -if current_user
+      = form_with model: [@message, @comment], local: true do |f|
+        .form_field
+          = f.text_area :text, class: "comment_text", placeholder: "type a comment", rows: "140"
+        .form_submit
+          = f.submit 'Send', class: "submit"
+    - else
+      %strong
+        %p.no_user_comment 
+          *** コメントの投稿には新規登録/ログインが必要です ***
   .comments 
     <コメント一覧>
-    %ul
-      %li.comment_user
-      -# = @user
-      %li.comment_message
-      -# = @comment
+    - if @comments
+      - @comments.each do |comment|
+        %ul
+          %li.comment_user
+            %strong
+              = link_to comment.user.nickname, user_path(comment.user_id), class: "comment_user"
+          %li.comment_message
+            = comment.text

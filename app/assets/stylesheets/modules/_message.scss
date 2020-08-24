@@ -47,17 +47,16 @@
       font-size: 20px;
     }
     .message_nickname {
-      // border: 1px solid gray;
-      // background-color: whitesmoke;
       margin: 8px 10px;
-      // text-align: center;
-      // height: calc(50vh - 45vh);
-      // width: calc(70vw - 400px);
       padding: 3px 5px;
       border-radius: 5px;
       font-size: 20px;
-      color: cornsilk;
       font-weight: bold;
+      .user_nickname {
+        color: cornsilk;
+        display: block;
+        text-decoration: none;
+      }
     }
     .btn {
       position: absolute;
