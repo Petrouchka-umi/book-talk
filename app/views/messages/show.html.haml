@@ -1,0 +1,33 @@
+.contents
+  .content_message
+    .contents__post
+      .message_title 
+        = @message.title
+      .message_name
+        = @message.name
+      .message_text 
+        = @message.text
+      .message_nickname
+        nickname : 
+        = current_user.nickname
+      .btn
+        %ul.list
+          %li
+            = link_to edit_message_path(@message.id), method: :get do
+              Edit
+          %li
+            = link_to message_path(@message.id), method: :delete do
+              delete
+  .contents_form
+    = form_with model: @comment, html: {class: "form_box"}, local: true do |f|
+      .form_field
+        = f.text_area :text, class: "comment_text", placeholder: "type a comment", rows: "140"
+      .form_submit
+        = f.submit 'Send', class: "submit"
+  .comments 
+    <コメント一覧>
+    %ul
+      %li.comment_user
+      -# = @user
+      %li.comment_message
+      -# = @comment

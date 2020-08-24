@@ -5,9 +5,8 @@
         = f.text_field :title, class: "message_title", placeholder: "tiile" 
         = f.text_field :name, class: "message_name", placeholder: "name(著者)" 
         = f.text_area :text, class: "message_text", placeholder: "type a message", rows: "140"
-        -# = f.text_field :nickname, class: "message_nickname", placeholder: "nickname" 
-        .message_nickname
+        .message_nickname 
           nickname : 
-          = current_user.nickname
+          = current_user.nickname 
       .form_submit
         = f.submit 'Send', class: "submit"

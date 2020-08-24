@@ -1,5 +1,8 @@
 .contents__form {
-  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 240px;
   width: 70vw;
   height: 60vh;
   background-color:  #5c658b;
@@ -7,6 +10,7 @@
   .form_box {
     .form_field {
       margin: 10px;
+      padding-top:10px;
       color: lightgray;
       .message_title {
         border: 1px solid gray;
@@ -33,19 +37,24 @@
         border-radius: 5px;
       } 
       .message_nickname {
-        border: 1px solid gray;
-        height: calc(60vh - 55vh);
-        width: calc(70vw - 40vw);
+        // height: calc(60vh - 55vh);
+        // width: calc(70vw - 40vw);
+        // border-radius: 5px;
         padding:5px;
-        border-radius: 5px;
+        margin-left: 5px;
+        border: none;
+        color: cornsilk;
+        font-size: 20px;
+        font-weight: bold;
       }
     }
+  }
   .form_submit {
     position: relative;
     .submit {
       position: absolute;
       right: 60px;
-      bottom: 12px;
+      bottom: 10px;
       width: 200px;
       height: 40px;
       font-size: 22px;
@@ -54,7 +63,6 @@
       border: 3px solid rgba(209, 124, 13, 0.719);
       color: rgba(209, 124, 13, 0.719);
       border-radius: 4px;
-    }
     }
   }
 }

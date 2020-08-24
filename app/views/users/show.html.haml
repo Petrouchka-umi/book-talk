@@ -1,0 +1,15 @@
+.contents
+  .contents__user
+    = current_user.nickname
+    さんの投稿一覧
+    - @messages.each do |message|
+      .contents__post 
+        .message_title 
+          = message.title
+        .message_name
+          = message.name
+        .message_text 
+          = message.text
+        .message_nickname
+          nickname : 
+          = current_user.nickname

@@ -9,5 +9,10 @@
       .message_text 
         = message.text
       .message_nickname
-        = message.nickname
+        nickname : 
+        = message.user.nickname
         -# = link_to   "/" を追加予定
+      .btn 
+        = link_to message_path(message) do
+          Show
+          -# = icon('fas', 'cog', class: "btn_icon")

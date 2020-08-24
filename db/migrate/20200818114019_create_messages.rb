@@ -5,7 +5,6 @@ class CreateMessages < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.text :text, null: false
       t.string :image
-      t.string :nickname, null: false
       t.references :user, forenign_key: true
       t.timestamps
     end
