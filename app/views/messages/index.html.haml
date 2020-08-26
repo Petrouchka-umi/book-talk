@@ -1,18 +1,23 @@
 .contents
   .search_box
+    = form_with url: search_messages_path, method: :get, class: "search_form", local: true do |f|
+      = f.text_field :title_key, placeholder: "本のタイトルを検索する", class: "search_input"
+      = f.submit '検索', class: "search_btn"
+
   - @messages.each do |message|
-    .contents__post 
-      .message_title 
-        = message.title
-      .message_name
-        = message.name
-      .message_text 
-        = message.text
-      .message_nickname
-        = link_to user_path(message.user.id), class: "user_nickname" do
-          nickname : 
-          = message.user.nickname 
-      .btn 
-        = link_to message_path(message) do
-          Show
-          -# = icon('fas', 'cog', class: "btn_icon")
+    = render partial: "message", locals: { message: message}
+    -# .contents__post 
+    -#   .message_title 
+    -#     = message.title
+    -#   .message_name
+    -#     = message.name
+    -#   .message_text 
+    -#     = message.text
+    -#   .message_nickname
+    -#     = link_to user_path(message.user.id), class: "user_nickname" do
+    -#       nickname : 
+    -#       = message.user.nickname 
+    -#   .btn 
+    -#     = link_to message_path(message) do
+    -#       Show
+    -#       -# = icon('fas', 'cog', class: "btn_icon")

@@ -6,7 +6,29 @@
   overflow: hidden;
   .search_box {
     height: 80px;
-    background-color: lightskyblue;
+    .search_form {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 20px;
+      .search_input {
+        height: 50px;
+        width: 55vw;
+        margin-right: 15px;
+        padding: 0 5px;
+        border-radius: 10px;
+        border: 2px solid #5c658b;
+      }
+      .search_btn {
+        border-radius: 15px;
+        display: block;
+        border: none;
+        background-color: #d37b33;
+        height: 50px;
+        width: 100px;
+        color: whitesmoke;
+      }
+    }
   }
   &__post {
     margin-right: auto;
@@ -22,7 +44,7 @@
     .message_title {
       height: calc(50vh - 45vh);
       border: 1px solid gray;
-      background-color: whitesmoke;
+      background-color: white;
       margin: 8px 10px;
       padding: 3px 5px;
       border-radius: 5px;
@@ -31,7 +53,7 @@
     .message_name {
       height: calc(50vh - 45vh);
       border: 1px solid gray;
-      background-color: whitesmoke;
+      background-color: white;
       margin: 8px 10px;
       padding: 3px 5px;
       border-radius: 5px;
@@ -39,7 +61,7 @@
     }
     .message_text {
       border: 1px solid gray;
-      background-color: whitesmoke;
+      background-color: white;
       margin: 8px 10px; 
       height: calc(50vh - 170px);
       padding: 3px 5px;
