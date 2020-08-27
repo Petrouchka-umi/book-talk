@@ -21,9 +21,9 @@
                 delete
   .contents_form
     -if current_user
-      = form_with model: [@message, @comment], local: true do |f|
+      = form_with model: [@message, @comment],id: "new_comment", local: true do |f|
         .form_field
-          = f.text_area :text, class: "comment_text", placeholder: "type a comment", rows: "140"
+          = f.text_area :text, class: "comment_text", placeholder: "type a comment"
         .form_submit
           = f.submit 'Send', class: "submit"
     - else
@@ -37,6 +37,7 @@
         %ul
           %li.comment_user
             %strong
-              = link_to comment.user.nickname, user_path(comment.user_id), class: "comment_user"
+              = link_to comment.user.nickname, user_path(comment.user_id), class: "comment_user" 
           %li.comment_message
+            *
             = comment.text

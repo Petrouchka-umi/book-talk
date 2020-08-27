@@ -12,6 +12,7 @@
       margin: 10px;
       padding-top:10px;
       color: lightgray;
+      font-size: 20px;
       .message_title {
         border: 1px solid gray;
         height: calc(60vh - 55vh);
@@ -37,9 +38,6 @@
         border-radius: 5px;
       } 
       .message_nickname {
-        // height: calc(60vh - 55vh);
-        // width: calc(70vw - 40vw);
-        // border-radius: 5px;
         padding:5px;
         margin-left: 5px;
         border: none;

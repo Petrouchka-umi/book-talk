@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   background-color: lightgrey;
-  height: 50px;
+  height: 60px;
   border-bottom: 2px solid #5c658b;
 }
 .title {
@@ -10,7 +10,7 @@
   color: #5c658b;
   letter-spacing: 0.15em;
   font-size: 25px;
-  line-height: 50px;
+  line-height: 60px;
   font-weight: bold;
 }
 .user_nav.grid-6 {
@@ -18,10 +18,9 @@
   position: relative;
   .post_user {
     width: 200px;
-    text-decoration: none;
     letter-spacing: 0.15em;
     font-weight: bold;
-    padding: 4px 12px;
+    padding: 9px 12px;
     border: 3px solid rgba(209, 124, 13, 0.719);
     color: rgba(209, 124, 13, 0.719);
     border-radius: 4px;
@@ -30,9 +29,8 @@
     ul {
       position: absolute;
       right: 175px;
-      top: -8px;
-      display: flex;
-      flex-direction: column;
+      top: -5px;
+      margin-top: 2px;
       li a {
         font-size: 14px;
         color: lightseagreen;
@@ -41,6 +39,7 @@
     }
   }
   .post {
+    line-height: 45px;
     text-decoration: none;
     letter-spacing: 0.15em;
     font-weight: bold;

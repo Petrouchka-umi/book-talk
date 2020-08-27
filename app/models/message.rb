@@ -2,7 +2,9 @@ class Message < ApplicationRecord
   belongs_to :user, optional: true
   has_many :comments
 
-  validates :text, presence: true
+  validates :title, presence: true
+  validates :name, presence: true
+  validates :text, presence: true, length: {maximum: 300}
 
   mount_uploader :image, ImageUploader
 
