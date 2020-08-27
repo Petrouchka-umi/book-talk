@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to messages_path, notice: 'メッセージが送信されました'
     else
-      flash.now[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = 'メッセージの未入力または文字数制限です。'
       render :new
     end
   end
@@ -41,6 +41,9 @@ class MessagesController < ApplicationController
     message = Message.find(params[:id])
     if message.update(message_params)
       redirect_to messages_path, notice: 'メッセージが編集されました'
+    else
+      flash.now[:alert] = 'メッセージの未入力または文字数制限です。'
+      # render :edit
     end
   end
   
