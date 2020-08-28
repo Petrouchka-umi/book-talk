@@ -14,10 +14,10 @@
  *= require_self
  */
 @import "reset";
-@import "modules/messages";
+@import "modules/message";
 @import "modules/new";
 @import "modules/user";
 @import "modules/show";
 @import "modules/flash";
-/* @import "font-awesome-sprockets"; */
-/* @import "font-awesome"; */
+@import "font-awesome-sprockets";
+@import "font-awesome"; 
