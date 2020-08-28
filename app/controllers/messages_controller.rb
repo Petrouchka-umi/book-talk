@@ -38,12 +38,12 @@ class MessagesController < ApplicationController
   end
   
   def update
-    message = Message.find(params[:id])
-    if message.update(message_params)
+    @message = Message.find(params[:id])
+    if @message.update(message_params)
       redirect_to messages_path, notice: 'メッセージが編集されました'
     else
       flash.now[:alert] = 'メッセージの未入力または文字数制限です。'
-      # render :edit
+      render :edit
     end
   end
   

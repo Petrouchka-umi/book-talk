@@ -4,7 +4,7 @@ class Message < ApplicationRecord
 
   validates :title, presence: true
   validates :name, presence: true
-  validates :text, presence: true, length: {maximum: 300}
+  validates :text, presence: true, length: {maximum: 200}
 
   mount_uploader :image, ImageUploader
 
