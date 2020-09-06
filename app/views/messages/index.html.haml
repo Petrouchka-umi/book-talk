@@ -4,8 +4,10 @@
       = f.text_field :title_key, placeholder: "本のタイトルを検索する", class: "search_input"
       = f.submit '検索', class: "search_btn"
 
-  - @messages.each do |message|
-    = render partial: "message", locals: { message: message}
+  .contents_list
+  = render @messages
+  -# - @messages.each do |message|
+    -# = render partial: "message", locals: { message: message}
     -# .contents__post 
     -#   .message_title 
     -#     = message.title
