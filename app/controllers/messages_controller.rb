@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @messages = Message.includes(:user).order("created_at DESC")
   end
   
-  
+
   def new
     @message = Message.new
   end
