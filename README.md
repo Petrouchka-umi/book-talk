@@ -1,7 +1,7 @@
 # Book Talk
 ### 読書をインプットしたままにしない、本専用のアウトプットツール！
 
-<img src="" width="360px">  
+<img src="book-index2.png" width="360px">   
 
 # 概要
 
@@ -18,7 +18,7 @@
 # 利用方法
 1.トップページから新規登録・ログインをします。  
 
-<img src="" width="360px"> 
+<img src="book-index.png" width="360px"> 
   
 2.右上の投稿ボタンから、アウトプットしたい本の投稿を行ます。 
   
@@ -28,16 +28,14 @@
   
 4.投稿すると、投稿一覧画面に遷移します。
 
+<img src="book-index2.png" width="360px">  
+  
 5.投稿一覧から投稿詳細へ遷移することができます。  
-投稿者は、自分の投稿を編集・削除ができます。
+投稿者は、自分の投稿を編集・削除ができます。  
+<img src="book-show.png" width="360px">     
   
-### 投稿一覧画面  
-  
-<img src="" width="360px">    
-  
-### グラフ画面  
-  
-<img src="" width="360px">    
+6.投稿詳細画面では、コメントを残すことができます。  
+<img src="comment.png" width="360px">  
   
 # 機能一覧
 |機能|概要|
